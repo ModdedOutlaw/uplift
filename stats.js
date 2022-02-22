@@ -10,6 +10,8 @@
     return res.json()
   }).then(function (data) {
     circSup.innerHTML += '<br><b>' + data.data.payload.circulatingSupply + ' </b><br>';
+    issuedSup.innerHTML += '<br><b>' + data.data.payload.issuedSupply + ' </b><br>';
+
     //console.log("wallets = " +data.data.payload.wallets);
     //console.log("number of transactions = " +data.data.payload.numTransactions);
     //console.log("Circulating Supply = " +data.data.payload.circulatingSupply);
