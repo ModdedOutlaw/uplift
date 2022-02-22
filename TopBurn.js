@@ -1,7 +1,7 @@
   const urlTopBurn = "https://github.com/ModdedOutlaw/uplift/tree/main/scraper/burnleaders.json";
   const outputTopBurn = document.querySelector('.output3');
   let totalBurned = 0;
-  // outputTopBurn.innerHTML = "";
+  outputTopBurn.innerHTML = "";
   // console.log(urlTopBurn);
   fetch(urlTopBurn).then(function (res) {
     // console.log("res..."+ JSON.stringify(res));
