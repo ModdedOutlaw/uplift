@@ -24,7 +24,7 @@
     //console.log(upliftAssets);
     TotalAssets = TotalAssets - upliftAssets;
     
-    while (i < 25) {
+    while (i < 102) {
       perKeys = (list[i].assets/TotalAssets) * 100
       output2.innerHTML += '<br> <b>' + (i-1) + '. </b>' + list[i].account + '  ' + list[i].assets + ' = '+ perKeys.toFixed(2) +' % <br>';
       i = i + 1;
@@ -32,9 +32,9 @@
   //  console.log(list.length);
     i = 0
 
-    output2.innerHTML += '<br> <b>Total Holders = ' + TotalHolders + '<br>';
+    //output2.innerHTML += '<br> <b>Total Holders = ' + TotalHolders + '<br>';
 
-    output2.innerHTML += '<br> <b>Total Assets = ' + TotalAssets + '<br>';
+   // output2.innerHTML += '<br> <b>Total Assets = ' + TotalAssets + '<br>';
 
   }).catch(function (error) {
     console.log(error);

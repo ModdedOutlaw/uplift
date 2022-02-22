@@ -13,7 +13,7 @@
 
     totalBurned = data.data.payload.total;
     //console.log("total =" + totalBurned)
-
+     
     let perBurn = 0;
     data.data.payload.leaderboard.forEach(function (val) {
       perBurn = (val.burnedAmount / totalBurned) * 100;
