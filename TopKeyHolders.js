@@ -30,7 +30,6 @@
       i = i + 1;
     }
   //  console.log(list.length);
-    i = 0
 
     //output2.innerHTML += '<br> <b>Total Holders = ' + TotalHolders + '<br>';
 
