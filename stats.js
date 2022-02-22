@@ -6,12 +6,18 @@
 
   circSup.innerHTML = "";
   issuedSup.innerHTML = "";
+  claimable.innerHTML = "";
 
   fetch(urlStats).then(function (res) {
     return res.json()
   }).then(function (data) {
-    circSup.innerHTML += '<br><b>' + data.data.payload.circulatingSupply + ' </b><br>';
-    issuedSup.innerHTML += '<br><b>' + data.data.payload.issuedSupply + ' </b><br>';
+    let cs = data.data.payload.circulatingSupply;
+    let is = data.data.payload.issuedSupply;
+    let cl = data.data.payload.claimable;
+
+    circSup.innerHTML += '<br><b>' + cs.toLocaleString("en-US") + ' </b><br>';
+    issuedSup.innerHTML += '<br><b>' + is.toLocaleString("en-US") + ' </b><br>';
+    claimable.innerHTML += '<br><b>' + cl.toLocaleString("en-US") + ' </b><br>';
 
     //console.log("wallets = " +data.data.payload.wallets);
     //console.log("number of transactions = " +data.data.payload.numTransactions);
