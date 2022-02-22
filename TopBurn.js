@@ -1,4 +1,4 @@
-  const urlTopBurn = "https://github.com/ModdedOutlaw/uplift/blob/main/scraper/burnleaders.json";
+  const urlTopBurn = "https://moddedoutlaw.github.io/uplift/scraper/burnleaders.json";
   const outputTopBurn = document.querySelector('.output3');
   let totalBurned = 0;
   outputTopBurn.innerHTML = "";
