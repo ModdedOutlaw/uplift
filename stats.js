@@ -1,4 +1,4 @@
-  const urlStats = "https://github.com/ModdedOutlaw/uplift/tree/main/scraper/upliftium.json";
+  const urlStats = "https://github.com/ModdedOutlaw/uplift/blob/main/scraper/upliftium.json";
   const circSup = document.querySelector('.outputCircSup');
   const issuedSup = document.querySelector('.outputIssuedSup');
   const claimable = document.querySelector('.outputClaimable');
