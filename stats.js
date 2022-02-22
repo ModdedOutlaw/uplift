@@ -5,6 +5,7 @@
   const outputTransactionTypes = document.querySelector('.outputTransactionType');
 
   circSup.innerHTML = "";
+  issuedSup.innerHTML = "";
 
   fetch(urlStats).then(function (res) {
     return res.json()
