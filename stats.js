@@ -7,6 +7,7 @@
   circSup.innerHTML = "";
   issuedSup.innerHTML = "";
   claimable.innerHTML = "";
+  outputTransactionTypes.innerHTML = "";
 
   fetch(urlStats).then(function (res) {
     return res.json()
@@ -14,10 +15,12 @@
     let cs = data.data.payload.circulatingSupply;
     let is = data.data.payload.issuedSupply;
     let cl = data.data.payload.claimable;
+    let tt = data.data.payload.transactions.byType[2].numTransactions;
 
     circSup.innerHTML += '<br><b>' + cs.toLocaleString("en-US") + ' </b><br>';
     issuedSup.innerHTML += '<br><b>' + is.toLocaleString("en-US") + ' </b><br>';
     claimable.innerHTML += '<br><b>' + cl.toLocaleString("en-US") + ' </b><br>';
+    outputTransactionTypes.innerHTML += '<br><b>' + tt.toLocaleString("en-US") + ' </b><br>';
 
     //console.log("wallets = " +data.data.payload.wallets);
     //console.log("number of transactions = " +data.data.payload.numTransactions);
@@ -26,6 +29,7 @@
     //console.log("transactions = " +data.data.payload.transactions.byType[0].numTransactions + ' Action Type = ' +data.data.payload.transactions.byType[0].actionType);
     
     data.data.payload.transactions.byType.forEach(function (val) {
+      //outputTransactionTypes.innerHTML +="transactions = " + val.numTransactions + " Action Type =" + val.actionType;
       //console.log("transactions = " + val.numTransactions + " Action Type =" + val.actionType);
     });
     //console.log("claimable = " +data.data.payload.claimable);
