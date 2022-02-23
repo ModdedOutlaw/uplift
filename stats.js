@@ -7,6 +7,7 @@
   const outputMeltNFT = document.querySelector('.MeltNFT');
   const outputPictures = document.querySelector('.outputPictures');
   const outputPortals = document.querySelector('.outputPortals');
+  const outputScreenshots = document.querySelector('.outputScreenshots');
 
 
   circSup.innerHTML = "";
@@ -17,6 +18,7 @@
   outputMeltNFT.innerHTML = "";
   outputPictures.innerHTML = "";
   outputPortals.innerHTML = "";
+  outputScreenshots.innerHTML = "";
 
 
   fetch(urlStats).then(function (res) {
@@ -36,6 +38,7 @@
     outputMeltNFT.innerHTML += '<br><b>' + data.data.payload.transactions.byType[5].numTransactions + ' </b><br>';
     outputPictures.innerHTML += '<br><b>' + data.data.payload.transactions.byType[6].numTransactions + ' </b><br>';
     outputPortals.innerHTML += '<br><b>' + data.data.payload.transactions.byType[7].numTransactions + ' </b><br>';
+    outputScreenshots.innerHTML += '<br><b>' + data.data.payload.transactions.byType[8].numTransactions + ' </b><br>';
 
     //console.log("wallets = " +data.data.payload.wallets);
     //console.log("number of transactions = " +data.data.payload.numTransactions);
