@@ -3,11 +3,21 @@
   const issuedSup = document.querySelector('.outputIssuedSup');
   const claimable = document.querySelector('.outputClaimable');
   const outputTransactionTypes = document.querySelector('.outputTransactionType');
+  const outputCrystallizeNFT = document.querySelector('.outputCrystallizeNFT');
+  const outputMeltNFT = document.querySelector('.MeltNFT');
+  const outputPictures = document.querySelector('.outputPictures');
+  const outputPortals = document.querySelector('.outputPortals');
+
 
   circSup.innerHTML = "";
   issuedSup.innerHTML = "";
   claimable.innerHTML = "";
-  outputTransactionTypes.innerHTML = "";
+  //outputTransactionTypes.innerHTML = "";
+  outputCrystallizeNFT.innerHTML = "";
+  outputMeltNFT.innerHTML = "";
+  outputPictures.innerHTML = "";
+  outputPortals.innerHTML = "";
+
 
   fetch(urlStats).then(function (res) {
     return res.json()
@@ -21,6 +31,11 @@
     issuedSup.innerHTML += '<br><b>' + is.toLocaleString("en-US") + ' </b><br>';
     claimable.innerHTML += '<br><b>' + parseInt(cl).toLocaleString("en-US") + ' </b><br>';
     outputTransactionTypes.innerHTML += '<br><b>' + tt.toLocaleString("en-US") + ' </b><br>';
+    //console.log("Crystalize = " + data.data.payload.transactions.byType[4].numTransactions);
+    outputCrystallizeNFT.innerHTML += '<br><b>' + data.data.payload.transactions.byType[4].numTransactions + ' </b><br>';
+    outputMeltNFT.innerHTML += '<br><b>' + data.data.payload.transactions.byType[5].numTransactions + ' </b><br>';
+    outputPictures.innerHTML += '<br><b>' + data.data.payload.transactions.byType[6].numTransactions + ' </b><br>';
+    outputPortals.innerHTML += '<br><b>' + data.data.payload.transactions.byType[7].numTransactions + ' </b><br>';
 
     //console.log("wallets = " +data.data.payload.wallets);
     //console.log("number of transactions = " +data.data.payload.numTransactions);
@@ -29,8 +44,8 @@
     //console.log("transactions = " +data.data.payload.transactions.byType[0].numTransactions + ' Action Type = ' +data.data.payload.transactions.byType[0].actionType);
     
     data.data.payload.transactions.byType.forEach(function (val) {
-      //outputTransactionTypes.innerHTML +="transactions = " + val.numTransactions + " Action Type =" + val.actionType;
-      //console.log("transactions = " + val.numTransactions + " Action Type =" + val.actionType);
+      //outputTransactionTypes.innerHTML +='<br><b>' +  val.numTransactions +'    ' + val.actionType + '</b><br>';
+      console.log("transactions = " + val.numTransactions + " Action Type =" + val.actionType);
     });
     //console.log("claimable = " +data.data.payload.claimable);
     //console.log("Number of Linked Accounts = " +data.data.payload.numLinkedAccounts);
