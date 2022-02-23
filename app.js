@@ -3,18 +3,28 @@
   let total = 0;
 
   fetch(url).then(function (res) {
+    console.log(res);
     return res.json()
   }).then(function (data) {
-    data.forEach(function (val) {
-      total += parseInt(val[1]);
-    });
 
+    let text = data;
+    let j = 1;
+    /*data.forEach(function (val) {
+      stext = text[j].toString();
+      temptext = stext.split(",");
+      output.innerHTML += '<br> <b>' + j + '. </b>' + temptext[0] + '    ' + temptext[1]+ '<br>';
+      j++
+    });*/
+  
     let i = 1;
-    while (i < 26) {
-      output.innerHTML += '<br> <b>' + i + '. </b>' + data[i - 1] + '<br>';
-      i = i + 1;
+    while (j < 26) {
+      stext = text[j].toString();
+      temptext = stext.split(",");
+      output.innerHTML += '<br> <b>' + j + '. </b>' + temptext[0] + '    ' + parseInt(temptext[1]).toLocaleString("en-US")+ '<br>';
+      j++
+
     }
-  //  console.log(total);
+    //  console.log(total);
   }).catch(function (error) {
     console.log(error);
 

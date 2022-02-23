@@ -15,10 +15,11 @@
     //console.log("total =" + totalBurned)
      
     let perBurn = 0;
+    j = 1;
     data.data.payload.leaderboard.forEach(function (val) {
       perBurn = (val.burnedAmount / totalBurned) * 100;
-      outputTopBurn.innerHTML += '<br>' + val.waxWallet + ' = ' + perBurn.toFixed(2) + ' % <br>';
-
+      outputTopBurn.innerHTML += '<br> <b>' + j + '. </b>' + val.waxWallet + ' = ' + perBurn.toFixed(2) + ' % <br>';
+      j++;
     });
 
     // console.log("total burned =" + totalBurned)
