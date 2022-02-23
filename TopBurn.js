@@ -21,7 +21,7 @@
     j = 1;
     data.data.payload.leaderboard.forEach(function (val) {
       perBurn = (val.burnedAmount / totalBurned) * 100;
-      outputTopBurn.innerHTML += '<br> <b>' + j + '. </b>' + val.waxWallet + ' = ' + perBurn.toFixed(2) + ' % <br>';
+      outputTopBurn.innerHTML += '<br> <b>' + j + '. </b>' + val.waxWallet + ' '+val.burnedAmount.toLocaleString("en-US") + ' = ' + perBurn.toFixed(2) + ' % <br>';
       j++;
     });
 
