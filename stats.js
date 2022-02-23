@@ -19,7 +19,7 @@
 
     circSup.innerHTML += '<br><b>' + cs.toLocaleString("en-US") + ' </b><br>';
     issuedSup.innerHTML += '<br><b>' + is.toLocaleString("en-US") + ' </b><br>';
-    claimable.innerHTML += '<br><b>' + cl.toLocaleString("en-US") + ' </b><br>';
+    claimable.innerHTML += '<br><b>' + parseInt(cl).toLocaleString("en-US") + ' </b><br>';
     outputTransactionTypes.innerHTML += '<br><b>' + tt.toLocaleString("en-US") + ' </b><br>';
 
     //console.log("wallets = " +data.data.payload.wallets);
