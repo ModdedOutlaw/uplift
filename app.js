@@ -16,9 +16,9 @@
       j++
     });*/
   
-    let i = 1;
+    let i = 0;
     while (j < 26) {
-      stext = text[j].toString();
+      stext = text[j-1].toString();
       temptext = stext.split(",");
       output.innerHTML += '<br> <b>' + j + '. </b>' + temptext[0] + '    ' + parseInt(temptext[1]).toLocaleString("en-US")+ '<br>';
       j++
