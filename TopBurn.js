@@ -1,5 +1,7 @@
   const urlTopBurn = "https://moddedoutlaw.github.io/uplift/scraper/burnleaders.json";
   const outputTopBurn = document.querySelector('.output3');
+  const outputTotalBurn = document.querySelector('.outputTotalBurn');
+
   let totalBurned = 0;
   outputTopBurn.innerHTML = "";
   // console.log(urlTopBurn);
@@ -12,6 +14,7 @@
     //  console.log("data..."+ data.data.payload.leaderboard[0].waxWallet);
 
     totalBurned = data.data.payload.total;
+    outputTotalBurn.innerHTML += '<br><b>' + totalBurned.toLocaleString("en-US") + ' </b><br>';
     //console.log("total =" + totalBurned)
      
     let perBurn = 0;

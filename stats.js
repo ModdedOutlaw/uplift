@@ -15,7 +15,7 @@
     let cs = data.data.payload.circulatingSupply;
     let is = data.data.payload.issuedSupply;
     let cl = data.data.payload.claimable;
-    let tt = data.data.payload.transactions.byType[2].numTransactions;
+    let tt = data.data.payload.transactions.byType[1].numTransactions;
 
     circSup.innerHTML += '<br><b>' + cs.toLocaleString("en-US") + ' </b><br>';
     issuedSup.innerHTML += '<br><b>' + is.toLocaleString("en-US") + ' </b><br>';
