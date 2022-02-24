@@ -3,7 +3,7 @@
   let total = 0;
 
   fetch(url).then(function (res) {
-    console.log(res);
+    //console.log(res);
     return res.json()
   }).then(function (data) {
 
