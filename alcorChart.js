@@ -2,9 +2,9 @@
  // const outputAlcorStats = document.querySelector('.outputAlcorStats');
  
   fetch(urlAlcorCharts).then(function (res) {
-    var chart = new ApexCharts(document.querySelector("#chart"), res);
-    chart.render();
-    console.log("ChartJson = " + res);
+  //  var chart = new ApexCharts(document.querySelector("#chart"), res);
+  //  chart.render();
+  //  console.log("ChartJson = " + res);
     return res.json()
   }).then(function (data) {
     console.log("ChartJson = " + data);
