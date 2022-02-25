@@ -15,7 +15,7 @@ header {
 	display: block;
 }
 header .profileLogo .logoPlaceholder {
-	background-color: rgba(208,207,207,1.00);
+	
 	width: 187px;
 	text-align: center;
 }
@@ -23,13 +23,12 @@ header .logoPlaceholder span {
 	width: 80px;
 	height: 22px;
 	font-family: 'Montserrat', sans-serif;
-	color: rgba(255,255,255,1.00);
 	font-size: 30px;
 	font-weight: 700;
 	line-height: 53px;
 }
 header .profilePhoto {
-	background-color: rgba(237,237,237,1.00);
+	
 	width: 259px;
 	border-radius: 50%;
 	height: 259px;
