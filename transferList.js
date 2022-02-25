@@ -1,8 +1,12 @@
   const urlTransferMio = "https://wax.api.atomicassets.io/atomicassets/v1/transfers?account=wesaveuplift&schema_name=upliftium&page=1&limit=100&order=desc&sort=created";
 
   const outputTransfers = document.querySelector('.outputTransfers');
+  const outputTransfersList = document.querySelector('.outputTransfersList');
+
 
   outputTransfers.innerHTML = "";
+  outputTransfersList.innerHTML = "";
+
 
   fetch(urlTransferMio).then(function (res) {
     return res.json()
@@ -51,11 +55,11 @@
     
    for(let i = 0; i < newlist.length; i++){
        tt += newlist[i][1];
-   // outputTransfers.innerHTML += '<br> <b>' + (i) + '. </b>' + newlist[i][0] + '  ' + newlist[i][1] + '<br>';
+       outputTransfersList.innerHTML += '<br> <b>' + (i+1) + '. </b>' + newlist[i][0] + '  ' + newlist[i][1] + '<br>';
     }
     console.log(newlist);
 
-    outputTransfers.innerHTML += '<br> <b>'+tt+'</b><br>';
+    outputTransfers.innerHTML += '<br><b>'+tt+'</b><br>';
 
   }).catch(function (error) {
     console.log(error);
