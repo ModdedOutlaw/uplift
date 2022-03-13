@@ -32,7 +32,7 @@
     let k = 0;
     let length = sortedarray.length;
 
-    console.log(sortedarray);
+    //console.log(sortedarray);
 
     while (i < length) {
       if (i === 0) {
@@ -57,7 +57,7 @@
        tt += newlist[i][1];
        outputTransfersList.innerHTML += '<br> <b>' + (i+1) + '. </b>' + newlist[i][0] + '  ' + newlist[i][1] + '<br>';
     }
-    console.log(newlist);
+    //console.log(newlist);
 
     outputTransfers.innerHTML += '<br><b>'+tt+'</b><br>';
 

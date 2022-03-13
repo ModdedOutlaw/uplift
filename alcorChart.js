@@ -1,4 +1,4 @@
-  const urlAlcorCharts = "https://wax.alcor.exchange/api/pools/616/charts?period=7D";
+  const urlAlcorCharts = "https://alcor.exchange/api/markets";
  // const outputAlcorStats = document.querySelector('.outputAlcorStats');
  
   fetch(urlAlcorCharts).then(function (res) {
@@ -7,10 +7,14 @@
   //  console.log("ChartJson = " + res);
     return res.json()
   }).then(function (data) {
-    console.log("ChartJson = " + data);
+    console.log("ChartJson = " + data[0].base_token.symbol.name);
    // var chart = new ApexCharts(document.querySelector("#chart"), data);
    
     data.forEach(function(val){
+      console.log(val.quote_token.symbol.name);
+      console.log(val.last_price);
+
+
      /* if(val.quote_token.symbol.name == "LIFTIUM"){
         console.log("Name = " + val.quote_token.symbol.name);
         console.log("1 Liftium = " + val.last_price +" wax");

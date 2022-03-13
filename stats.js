@@ -27,6 +27,8 @@
   fetch(urlStats).then(function (res) {
     return res.json()
   }).then(function (data) {
+
+    //console.log(data);
     let cs = data.data.payload.circulatingSupply;
     let is = data.data.payload.issuedSupply;
     let cl = data.data.payload.claimable;

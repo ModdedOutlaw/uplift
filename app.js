@@ -6,7 +6,7 @@
     //console.log(res);
     return res.json()
   }).then(function (data) {
-
+    //console.log(data);
     let text = data;
     let j = 1;
     /*data.forEach(function (val) {
