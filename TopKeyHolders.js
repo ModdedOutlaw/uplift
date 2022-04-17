@@ -9,31 +9,39 @@
 
     return res.json()
   }).then(function (data) {
-    //console.log(data);
+    console.log(data.data);
     let list = data.data;
     TotalHolders = list.length -2;
     data.data.forEach(function (val) {
-      //console.log(val);
+
       TotalAssets += parseInt(val.assets);
+      if(val.account == "upliftservic" || val.account == "upliftpoolsx" || val.account == "upliftworld1" || val.account == "neftyblocksp"){
+        console.log("UPLIFT ASSET");
+        TotalAssets -= parseInt(val.assets);
+      }
+
     });
-  //  console.log("TotalAssets = " + TotalAssets);
-    let i = 2;
+    
+    let i = 0;
     let perKeys = 0;
     let upliftAssets = 0;
-    upliftAssets = parseInt(list[0].assets) + parseInt(list[1].assets);
-    //console.log(upliftAssets);
+    let standing = 0;
+    //upliftAssets = parseInt(list[0].assets) + parseInt(list[1].assets);
+    console.log(TotalAssets);
     TotalAssets = TotalAssets - upliftAssets;
-    
+  
     while (i < 102) {
       perKeys = (list[i].assets/TotalAssets) * 100
-      output2.innerHTML += '<br> <b>' + (i-1) + '. </b>' + list[i].account + '  ' + list[i].assets + ' = '+ perKeys.toFixed(2) +' % <br>';
+      if(list[i].account == "upliftservic" ||list[i].account == "upliftpoolsx" || list[i].account == "upliftworld1" || list[i].account == "neftyblocksp"){
+      }else{
+        standing = standing + 1;
+      output2.innerHTML += '<br> <b>' + (standing) + '. </b>' + list[i].account + '  ' + list[i].assets + ' = '+ perKeys.toFixed(2) +' % <br>';
+      
+      }
       i = i + 1;
     }
-  //  console.log(list.length);
 
-    //output2.innerHTML += '<br> <b>Total Holders = ' + TotalHolders + '<br>';
 
-   // output2.innerHTML += '<br> <b>Total Assets = ' + TotalAssets + '<br>';
 
   }).catch(function (error) {
     console.log(error);
