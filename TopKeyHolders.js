@@ -15,7 +15,7 @@
     data.data.forEach(function (val) {
 
       TotalAssets += parseInt(val.assets);
-      if(val.account == "upliftservic" || val.account == "upliftpoolsx" || val.account == "upliftworld1" || val.account == "neftyblocksp"){
+      if(val.account == "upliftsocial"|| val.account == "upliftservic" || val.account == "upliftpoolsx" || val.account == "upliftworld1" || val.account == "neftyblocksp"){
         console.log("UPLIFT ASSET");
         TotalAssets -= parseInt(val.assets);
       }
@@ -24,15 +24,11 @@
     
     let i = 0;
     let perKeys = 0;
-    let upliftAssets = 0;
     let standing = 0;
-    //upliftAssets = parseInt(list[0].assets) + parseInt(list[1].assets);
-    console.log(TotalAssets);
-    TotalAssets = TotalAssets - upliftAssets;
-  
-    while (i < 102) {
+ 
+    while (i < 104) {
       perKeys = (list[i].assets/TotalAssets) * 100
-      if(list[i].account == "upliftservic" ||list[i].account == "upliftpoolsx" || list[i].account == "upliftworld1" || list[i].account == "neftyblocksp"){
+      if(list[i].account == "upliftsocial"|| list[i].account == "upliftservic" ||list[i].account == "upliftpoolsx" || list[i].account == "upliftworld1" || list[i].account == "neftyblocksp"){
       }else{
         standing = standing + 1;
       output2.innerHTML += '<br> <b>' + (standing) + '. </b>' + list[i].account + '  ' + list[i].assets + ' = '+ perKeys.toFixed(2) +' % <br>';
